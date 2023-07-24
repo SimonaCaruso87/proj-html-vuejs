@@ -5,7 +5,18 @@
 */    
 @use "variables" as *;
 
-@mixin main-coloring{
-    background-color: $main-color ;
-    color: $secondary-color;
+// @mixin main-coloring{
+//     background-color: $main-color ;
+//     color: $secondary-color;
+// }
+
+@mixin button-orange{
+    background-color: $first-color-button;
+    color: $third-color-button;
+    border:none;
+}
+@mixin button-blue{
+    background-color: $second-color-button;
+    color: $third-color-button;
+    border:none;
 }
