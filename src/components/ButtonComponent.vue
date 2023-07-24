@@ -2,28 +2,34 @@
 
 import { store } from '../store.js';
 
+
 export default{
-    name: "MainComponent",
+    name: "ButtonComponent",
     data(){
+       
         return{
-          store
+          store 
         }
+
     },
     methods:{
+
+    },
+    props:{
+        textButton:{
+            type:String,
+            default:""
+        },
 
     }
 }
 </script>
 
 <template>
-
-    <main>
-        <section class="section-1">
-            
-
-        </section>
-    </main>
-
+    
+    <button class="btn button-orange orange rounded-5" type="button">{{ textButton }}</button>
+    
+    
 </template>
 
 <style lang="scss" scoped>
@@ -32,8 +38,5 @@ export default{
 @use "../assets/scss/main.scss" as *;
 @use "../assets/scss/partials/variables.scss" as*;
 
-main{
-    // background-image:;
-}
-
+        
 </style>

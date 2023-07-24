@@ -3,6 +3,7 @@
 import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import ButtonComponent from './components/ButtonComponent.vue';
 import axios from 'axios';
 import { store } from './store.js';
 
@@ -12,7 +13,8 @@ export default{
   components:{
      HeaderComponent ,
      MainComponent ,
-     FooterComponent
+     FooterComponent ,
+     ButtonComponent
   },
   data(){
     return{
@@ -32,6 +34,8 @@ export default{
 <MainComponent />
 
 <FooterComponent />
+
+<ButtonComponent />
 
 
 </template>

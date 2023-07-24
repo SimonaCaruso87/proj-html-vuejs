@@ -14,9 +14,24 @@
     background-color: $first-color-button;
     color: $third-color-button;
     border:none;
+    font-size: 12px ;
+    color: white;
+    font-weight: bolder;
+    padding: 15px;
+    width:200px;
 }
 @mixin button-blue{
     background-color: $second-color-button;
     color: $third-color-button;
     border:none;
+    font-size: 12px ;
+    color: white;
+    font-weight: bolder;
+    padding: 15px;
+    width:200px;
+}
+
+@mixin text-header-button{
+    color:white;
+    font-weight: bolder;
 }
