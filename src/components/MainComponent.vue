@@ -16,7 +16,7 @@ export default{
 </script>
 
 <template>
-    <main class="p-5">
+    <main class="p-3">
         <div class="container text-center">
             <h3 class="text-black fw-bold">Meet The New Agency SEO Template</h3>
             <h3 class="text-black fw-bold">From The Avada Team</h3>
@@ -25,23 +25,24 @@ export default{
         </div>
         <div class="container w-100 d-flex justify-content-center align-items-center">
             <div class="bg-white p-4 m-4" style="height: 200px; width: 250px;">
-              <div><i class="fa-solid fa-road fa-2xl" style="color:orange;"></i></div>  
-             <h5 class="text-black fw-bold text-center">Establish Goals</h5>
-             <h6 class="font-size text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.</h6>
+                <i class="fa-solid fa-road fa-2xl" style="color:orange; display: block; height: 50px;"></i> 
+                <h5 class="text-black fw-bold text-center">Establish Goals</h5>
+                <h6 class="font-size text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.</h6>
             </div>
             <div class="bg-white p-4 m-4" style="height: 200px; width: 250px;">
-                <i class="fa-solid fa-video 2-xs"></i>
+                <i class="fa-solid fa-video 2-xs" style="color:orange; display: block; height: 50px;"></i>
                 <h5 class="text-black fw-bold text-center">Work With A Team</h5>
                 <h6 class="font-size text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.</h6>
 
             </div>
             <div class="bg-white p-4 m-4" style="height: 200px; width: 250px;">
+                <i class="fa-solid fa-droplet" style="color:orange; display: block; height: 50px;"></i>
                 <h5 class="text-black fw-bold text-center">Get Results</h5>
                 <h6 class="font-size text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.</h6>
 
             </div>
         </div>
-        <div class="d-flex justify-content-center align-items-center">
+        <div class="d-flex justify-content-center align-items-center" style="background-size:cover;">
             <img src="../assets/img/agency-seo-desk-front-600x285.jpg" style="width:600px; height:285px;" alt="desk-front">
         </div>
     </main>
