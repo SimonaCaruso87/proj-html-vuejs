@@ -26,23 +26,23 @@ export default{
         <div class="container w-100 d-flex justify-content-center align-items-center">
             <div class="bg-white p-4 m-4" style="height: 200px; width: 250px;">
                 <i class="fa-solid fa-road fa-2xl" style="color:orange; display: block; height: 50px;"></i> 
-                <h5 class="text-black fw-bold text-center">Establish Goals</h5>
+                <a href="#"><h5 class="text-black fw-bold text-center change">Establish Goals</h5></a>
                 <h6 class="font-size text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.</h6>
             </div>
             <div class="bg-white p-4 m-4" style="height: 200px; width: 250px;">
                 <i class="fa-solid fa-video 2-xs" style="color:orange; display: block; height: 50px;"></i>
-                <h5 class="text-black fw-bold text-center">Work With A Team</h5>
+                <h5 class="text-black fw-bold text-center change">Work With A Team</h5>
                 <h6 class="font-size text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.</h6>
 
             </div>
             <div class="bg-white p-4 m-4" style="height: 200px; width: 250px;">
                 <i class="fa-solid fa-droplet" style="color:orange; display: block; height: 50px;"></i>
-                <h5 class="text-black fw-bold text-center">Get Results</h5>
+                <h5 class="text-black fw-bold text-center change">Get Results</h5>
                 <h6 class="font-size text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.</h6>
 
             </div>
         </div>
-        <div class="d-flex justify-content-center align-items-center" style="background-size:cover;">
+        <div class="d-flex justify-content-center align-items-center" style="width: 100%;">
             <img src="../assets/img/agency-seo-desk-front-600x285.jpg" style="width:600px; height:285px;" alt="desk-front">
         </div>
     </main>
@@ -56,13 +56,16 @@ export default{
 
 main{
     background-color:$second-color-bg;
-    height:600px;
+    height:auto;
 
     .font-size{
         color: $third-color-text;
         font-size: $third-size;
         padding: 5px;
         word-spacing: 4px;
+    }
+    .change:hover{
+        color:$fourth-color-text;
     }
 }
 

@@ -4,6 +4,7 @@ import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
 import ButtonComponent from './components/ButtonComponent.vue';
+import MainSectionServiceComponent from './components/MainSectionServiceComponent.vue';
 import axios from 'axios';
 import { store } from './store.js';
 
@@ -14,7 +15,8 @@ export default{
      HeaderComponent ,
      MainComponent ,
      FooterComponent ,
-     ButtonComponent
+     ButtonComponent ,
+     MainSectionServiceComponent
   },
   data(){
     return{
@@ -32,6 +34,8 @@ export default{
 <HeaderComponent />
 
 <MainComponent />
+
+<MainSectionServiceComponent />
 
 <FooterComponent />
 
