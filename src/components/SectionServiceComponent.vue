@@ -27,31 +27,31 @@ export default{
         <div class="container text-center d-flex justify-content-center align-items-center p-3">
         <!-- Card 1 -->
             <div class="card container-card m-3 p-4" style="height:250px; width:200px;">
-                <!-- <i class="fa-brands fa-google" style="color:orange; display: block; height: 50px;"></i> -->
-                <h5>Google SEO</h5>
+                <div class="d-flex justify-content-center align-items-center p-2 text-warning"><font-awesome-icon icon="fa-brands fa-google"/></div>
+                <h6 class="p-2 fw-bold">Google SEO</h6>
                 <h6 class="font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corporis saepe minima earum quasi laudantium exercitationem reiciendis commodi nesciunt tempore.</h6>
-                <h6 class="text-warning">Read More > </h6>
+                <h6 class="text-warning font-size pt-2">Read More > </h6>
             </div>
         <!-- Card 2 -->    
             <div class="card container-card m-3 p-4" style="height:250px; width:200px;">
-                <i class="fa-solid fa-gear" style="color:orange; display: block; height: 50px;"></i>
-                <h5 class="p-2">Brand Strategy</h5>
+                <div class="d-flex justify-content-center align-items-center p-2 text-warning"><font-awesome-icon icon="fa-solid fa-gear"/></div>
+                <h6 class="p-2 fw-bold">Brand Strategy</h6>
                 <h6 class="font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corporis saepe minima earum quasi laudantium exercitationem reiciendis commodi nesciunt tempore.</h6>
-                <h6 class="text-warning">Read More > </h6>
+                <h6 class="text-warning font-size pt-2">Read More > </h6>
             </div>
         <!-- Card 3 -->    
             <div class="card container-card m-3 p-4" style="height:250px; width:200px;">
-                <i class="fa-solid fa-building" style="color:orange; display: block; height: 50px;"></i>
-                <h5 class="p-2">Local SEO</h5>
+                <div class="d-flex justify-content-center align-items-center p-2 text-warning"><font-awesome-icon icon="fa-solid fa-building"/></div>
+                <h6 class="p-2 fw-bold">Local SEO</h6>
                 <h6 class="font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corporis saepe minima earum quasi laudantium exercitationem reiciendis commodi nesciunt tempore.</h6>
-                <h6 class="text-warning">Read More > </h6>
+                <h6 class="text-warning font-size pt-2">Read More > </h6>
             </div>
         <!-- Card 4 -->    
             <div class="card container-card m-3 p-4" style="height:250px; width:200px;">
-                <i class="fa-solid fa-chart-bar" style="color:orange; display: block; height: 50px;"></i>
-                <h5 class="p-2">SEO Analysis</h5>
+                <div class="d-flex justify-content-center align-items-center p-2 text-warning"><font-awesome-icon icon="fa-solid fa-chart-bar"/></div>
+                <h6 class="p-2 fw-bold">SEO Analysis</h6>
                 <h6 class="font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corporis saepe minima earum quasi laudantium exercitationem reiciendis commodi nesciunt tempore.</h6>
-                <h6 class="text-warning">Read More > </h6>
+                <h6 class="text-warning font-size pt-2">Read More > </h6>
             </div>
         </div>
     </section>
@@ -75,7 +75,7 @@ section{
     }
 
     .font-size{
-       font-size: 11px;
+       font-size: 10px;
        word-spacing: 4px;
     }
 

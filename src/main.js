@@ -11,13 +11,13 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faVideo } from '@fortawesome/free-solid-svg-icons'
 import { faRoad } from '@fortawesome/free-solid-svg-icons'
 import { faDroplet } from '@fortawesome/free-solid-svg-icons'
-// import { faGoogle as faG } from '@fortawesome/free-solid-svg-icons'
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
 import { faChartBar } from '@fortawesome/free-solid-svg-icons'
 import { faBuilding } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faVideo , faRoad , faDroplet , faGear , faChartBar , faBuilding)
+library.add(faVideo , faRoad , faDroplet , faGoogle , faGear , faChartBar , faBuilding)
 //aggiungere faG
 
 createApp(App)

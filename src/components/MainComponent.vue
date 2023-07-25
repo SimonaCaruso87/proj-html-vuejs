@@ -6,9 +6,27 @@ export default{
     name: "MainComponent",
     data(){
         return{
-          store
+          store,
+          textMain:[
+            { 
+                textTitle: "Establish Goals",
+                text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.",
+                fontAwesome : "fa-solid fa-road"
+            },
+            { 
+                textTitle : "Work With A Team",
+                text : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.",
+                fontAwesome : "fa-solid fa-video"
+            },
+            { 
+                textTitle : "Get Results",
+                text : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.",
+                fontAwesome : "fa-solid fa-droplet"
+            },
+           ] 
         }
     },
+
     methods:{
 
     }
@@ -27,24 +45,10 @@ export default{
         <!-- Card Section Central -->
         <div class="container w-100 d-flex justify-content-center align-items-center">
             <!-- Card 1 Establich Goals -->
-            <div class="bg-white p-4 m-4" style="height: 200px; width: 250px;">
-                <i class="fa-solid fa-road fa-2xl" style="color:orange; display: block; height: 50px;"></i> 
-                <a href="#"><h5 class="text-black fw-bold text-center change">Establish Goals</h5></a>
-                <h6 class="font-size text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.</h6>
-            </div>
-            <!-- Card 2 Work With a Team -->
-            <div class="bg-white p-4 m-4" style="height: 200px; width: 250px;">
-                <i class="fa-solid fa-video 2-xs" style="color:orange; display: block; height: 50px;"></i>
-                <h5 class="text-black fw-bold text-center change">Work With A Team</h5>
-                <h6 class="font-size text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.</h6>
-
-            </div>
-            <!-- Card 3 Get Results -->
-            <div class="bg-white p-4 m-4" style="height: 200px; width: 250px;">
-                <i class="fa-solid fa-droplet" style="color:orange; display: block; height: 50px;"></i>
-                <h5 class="text-black fw-bold text-center change">Get Results</h5>
-                <h6 class="font-size text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.</h6>
-
+            <div v-for="(texts , i ) in textMain" :key="i" class="bg-white p-4 m-4" style="height: 200px; width: 250px;">
+                <div class="d-flex justify-content-center align-items-center p-2" style="color:orange;"><font-awesome-icon :icon="texts.fontAwesome"/></div>
+                <a href="#"><h5 class="fw-bold text-center change p-2">{{ texts.textTitle }}</h5></a>
+                <h6 class="font-size text-center">{{ texts.text }}</h6>
             </div>
         </div>
             <!-- Img Footer -->
@@ -73,6 +77,9 @@ main{
     }
     .change:hover{
         color:$fourth-color-text;
+    }
+    a{
+        text-decoration: none;
     }
 }
 

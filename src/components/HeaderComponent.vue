@@ -12,13 +12,36 @@ export default{
         return{
           store,
           linkNavbar:[
-            "Home" ,
-            "Who we are" ,
-            "What we do" ,
-            "Where we work",
-            "Careers" , 
-            "News"
-          ]
+            { 
+                text: "Home",
+                button: false 
+            },
+            {
+                text: "Who we are" ,
+                button: false
+            },
+            {
+                text: "What we do" , 
+                button: false
+            },
+            {
+                text: "Where we work",
+                button: false
+            },
+            {
+                text: "Careers",
+                button: false
+            },
+            {
+                text: "APPLY",
+                button: true
+            },
+            {
+                text: "News",
+                button: false
+            },
+            
+          ],
         }
 
     },
@@ -30,14 +53,15 @@ export default{
 
 <template>
 
-    
-
     <header class="position-relative">
         <div class="container d-flex d-flex-end p-3">
             <div class="logo"><img src="../assets/img/logo_seo_1x.png" alt="Logo"></div>
             <ul class="navbar-nav menu d-inline-block text-light">
-                <li  v-for="(link , i ) in linkNavbar" :key="i" class="nav-item"><a class="nav-link active" aria-current="page" href="#">{{ link }}</a></li>
-                <li><button class="btn btn-outline-warning fs-button" type="button">APPLY</button></li>
+                <template v-for="(link , i ) in linkNavbar" :key="i">
+                    <li v-if="link.button == false" class="nav-item"><a class="nav-link active" aria-current="page" href="#">
+                    {{ link.text }}</a></li> 
+                    <li v-else><button class="btn btn-outline-warning fs-button" type="button">{{ link.text }}</button></li>  
+                </template>
                 <li><ButtonComponent :textButton="'GET IN TOUCH NOW'"/></li>
             </ul>
         </div>
