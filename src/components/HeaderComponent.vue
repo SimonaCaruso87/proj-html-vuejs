@@ -99,6 +99,10 @@ header{
         .text-header{
             color:$fifth-color-button;
         }
+        .text-header-button{
+            color: $fifth-color-button;
+            font-weight: bolder;
+        }
 }
 
 </style>

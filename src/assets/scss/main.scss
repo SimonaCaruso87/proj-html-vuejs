@@ -14,23 +14,6 @@
 //     border: 1px solid $main-color;
 // }
 
-// body{
-//     color: // BUTTON COLOR
-//     $first-color-button: #FFA737;
-//     $second-color-button: #556EED;
-//     $third-color-button: #F7F8F9;
-    
-//     //COLOR TEXT
-//     $first-color-text: #607AFE;
-//     $second-color-text: #202020;
-//     $third-color-text: #5D5F64;
-//     $fourth-color-text:#FFA737;
-    
-//     //BACKGROUND-COLOR
-//     $first-color-bg: #001061;
-//     $second-color-bg: #f8f8f8;
-// }
-
 button.orange{
     @include button-orange;
 }
@@ -38,4 +21,3 @@ button.orange{
 button.blue{
     @include button-blue;
 }
-    
