@@ -87,9 +87,6 @@ header{
             justify-content: center;
             align-items: center;
         }
-        .fs-orange:hover{
-            background-color:orangered;
-        }
 
         .coordinates{
             top:300px;
@@ -99,7 +96,7 @@ header{
         .text-header{
             color:$fifth-color-button;
         }
-        .text-header-button{
+        .text-header-bottom{
             color: $fifth-color-button;
             font-weight: bolder;
         }

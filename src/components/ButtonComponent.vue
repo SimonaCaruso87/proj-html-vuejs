@@ -29,7 +29,7 @@ export default{
     
     <button class="btn button-orange orange rounded-5" type="button">{{ textButton }}</button>
     
-    
+
 </template>
 
 <style lang="scss" scoped>
@@ -37,6 +37,10 @@ export default{
 @use "../assets/scss/partials/mixins" as *;
 @use "../assets/scss/main.scss" as *;
 @use "../assets/scss/partials/variables.scss" as*;
+
+        .orange:hover{
+            background-color:orangered;
+        }
 
         
 </style>

@@ -25,10 +25,12 @@ export default{
         </div>
         <div class="container w-100 d-flex justify-content-center align-items-center">
             <div class="bg-white p-4 m-4" style="height: 200px; width: 250px;">
+              <div><i class="fa-solid fa-road fa-2xl" style="color:orange;"></i></div>  
              <h5 class="text-black fw-bold text-center">Establish Goals</h5>
              <h6 class="font-size text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.</h6>
             </div>
             <div class="bg-white p-4 m-4" style="height: 200px; width: 250px;">
+                <i class="fa-solid fa-video 2-xs"></i>
                 <h5 class="text-black fw-bold text-center">Work With A Team</h5>
                 <h6 class="font-size text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus eaque rerum accusantium in beatae incidunt? Inventore quas ratione exercitationem suscipit.</h6>
 
