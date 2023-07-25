@@ -3,7 +3,7 @@
 import { store } from '../store.js';
 
 export default{
-    name: "MainSectionServiceComponent",
+    name: "SectionOurWorkComponent",
     data(){
         return{
           store
@@ -17,9 +17,9 @@ export default{
 
 <template>
     <section class="p-5">
-        <!-- Title Section Main Component Service -->
+        <!-- Title Section Main Component Our Work -->
         <div class="text-center text-white pt-5">
-            <h4>See Our Top Noth Service</h4>
+            <h4>Our Work</h4>
             <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. In accusamus</h6>
             <h6>tempore laboriosam minus!</h6>
         </div>
@@ -27,29 +27,43 @@ export default{
         <div class="container text-center d-flex justify-content-center align-items-center p-3">
         <!-- Card 1 -->
             <div class="card container-card m-3 p-4" style="height:250px; width:200px;">
-                <i class="fa-brands fa-google" style="color:orange; display: block; height: 50px;"></i>
+                <!-- <i class="fa-brands fa-google" style="color:orange; display: block; height: 50px;"></i> -->
                 <h5>Google SEO</h5>
                 <h6 class="font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corporis saepe minima earum quasi laudantium exercitationem reiciendis commodi nesciunt tempore.</h6>
                 <h6 class="text-warning">Read More > </h6>
             </div>
         <!-- Card 2 -->    
-            <div class="card container-card m-3 p-4" style="height:250px; width:200px;">
+            <div class="card container-card m-3 p-4" style="height:200px; width:200px;">
                 <i class="fa-solid fa-gear" style="color:orange; display: block; height: 50px;"></i>
-                <h5>Brand Strategy</h5>
+                <h5 class="p-2">Brand Strategy</h5>
                 <h6 class="font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corporis saepe minima earum quasi laudantium exercitationem reiciendis commodi nesciunt tempore.</h6>
                 <h6 class="text-warning">Read More > </h6>
             </div>
         <!-- Card 3 -->    
-            <div class="card container-card m-3 p-4" style="height:250px; width:200px;">
+            <div class="card container-card m-3 p-4" style="height:200px; width:200px;">
                 <i class="fa-solid fa-building" style="color:orange; display: block; height: 50px;"></i>
-                <h5>Local SEO</h5>
+                <h5 class="p-2">Local SEO</h5>
                 <h6 class="font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corporis saepe minima earum quasi laudantium exercitationem reiciendis commodi nesciunt tempore.</h6>
                 <h6 class="text-warning">Read More > </h6>
             </div>
         <!-- Card 4 -->    
-            <div class="card container-card m-3 p-4" style="height:250px; width:200px;">
+            <div class="card container-card m-3 p-4" style="height:200px; width:200px;">
                 <i class="fa-solid fa-chart-bar" style="color:orange; display: block; height: 50px;"></i>
-                <h5>SEO Analysis</h5>
+                <h5 class="p-2">SEO Analysis</h5>
+                <h6 class="font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corporis saepe minima earum quasi laudantium exercitationem reiciendis commodi nesciunt tempore.</h6>
+                <h6 class="text-warning">Read More > </h6>
+            </div>
+        <!-- Card 5 -->    
+            <div class="card container-card m-3 p-4" style="height:200px; width:200px;">
+                <i class="fa-solid fa-chart-bar" style="color:orange; display: block; height: 50px;"></i>
+                <h5 class="p-2">SEO Analysis</h5>
+                <h6 class="font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corporis saepe minima earum quasi laudantium exercitationem reiciendis commodi nesciunt tempore.</h6>
+                <h6 class="text-warning">Read More > </h6>
+            </div>
+        <!-- Card 6 -->    
+            <div class="card container-card m-3 p-4" style="height:200px; width:200px;">
+                <i class="fa-solid fa-chart-bar" style="color:orange; display: block; height: 50px;"></i>
+                <h5 class="p-2">SEO Analysis</h5>
                 <h6 class="font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corporis saepe minima earum quasi laudantium exercitationem reiciendis commodi nesciunt tempore.</h6>
                 <h6 class="text-warning">Read More > </h6>
             </div>
