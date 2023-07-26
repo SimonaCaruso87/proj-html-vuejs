@@ -60,8 +60,8 @@ export default{
                 <div class="fontawesome-style"><font-awesome-icon :icon="texts.fontAwesomeIcon"/></div>
                 <h6 class="p-3 fw-bold change">{{ texts.textTitle}}</h6>
                 <h6 class="font-size">{{ texts.text }}</h6>
-                <h6 class="text-warning font-size pt-4 visible">{{ texts.textBottom }}</h6>
-                <h6 class="font-size component-visible">Let's Work Togheter ></h6>
+                <a href="#"><h6 class="text-warning font-size pt-4 visible">{{ texts.textBottom }}</h6></a>
+                <a href="#"><h6 class="font-size component-visible">Let's Work Togheter ></h6></a>
             </div>
         </div>
     </section>
@@ -140,6 +140,10 @@ section{
         position: absolute;
         bottom:2px;
         left:30px;
+    }
+
+    a{
+        text-decoration: none;
     }
 }   
 
