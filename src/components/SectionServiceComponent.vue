@@ -44,7 +44,7 @@ export default{
 <template>
     <section class="p-5">
         <!-- Title Section Main Component Service -->
-        <div class="text-center text-white pt-5">
+        <div class="text-center text-white p-2">
             <h4>See Our Top Noth Service</h4>
             <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. In accusamus</h6>
             <h6>tempore laboriosam minus!</h6>
@@ -58,7 +58,7 @@ export default{
             class="card container-card m-3 p-3" 
             style="height:300px; width:200px;">
                 <div class="fontawesome-style"><font-awesome-icon :icon="texts.fontAwesomeIcon"/></div>
-                <h6 class="p-3 fw-bold">{{ texts.textTitle}}</h6>
+                <h6 class="p-3 fw-bold change">{{ texts.textTitle}}</h6>
                 <h6 class="font-size">{{ texts.text }}</h6>
                 <h6 class="text-warning font-size pt-4">{{ texts.textBottom }}</h6>
             </div>
@@ -88,7 +88,19 @@ section{
 
     .container-card{
         background-color: $third-color-bg;
-        color: $fifth-color-button;      
+        color: $fifth-color-button;  
+        border:10px solid $third-color-bg;
+    }
+
+    .container-card:hover{
+        background-color: $third-color-bg;
+        border:10px solid #04288a7c;
+
+        transition: all 0.3s ease-in-out;
+        .change:hover{
+        color: $fourth-color-text;
+    }
+
     }
 
     .fontawesome-style{
