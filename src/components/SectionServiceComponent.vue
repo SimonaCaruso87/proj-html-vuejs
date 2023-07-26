@@ -60,7 +60,8 @@ export default{
                 <div class="fontawesome-style"><font-awesome-icon :icon="texts.fontAwesomeIcon"/></div>
                 <h6 class="p-3 fw-bold change">{{ texts.textTitle}}</h6>
                 <h6 class="font-size">{{ texts.text }}</h6>
-                <h6 class="text-warning font-size pt-4">{{ texts.textBottom }}</h6>
+                <h6 class="text-warning font-size pt-4 visible">{{ texts.textBottom }}</h6>
+                <h6 class="font-size component-visible">Let's Work Togheter ></h6>
             </div>
         </div>
     </section>
@@ -90,16 +91,18 @@ section{
         background-color: $third-color-bg;
         color: $fifth-color-button;  
         border:10px solid $third-color-bg;
+
+        transition: all 0.3s ease-in-out;
     }
 
     .container-card:hover{
         background-color: $third-color-bg;
-        border:10px solid #04288a7c;
+        border:10px solid #092369;
 
-        transition: all 0.3s ease-in-out;
-        .change:hover{
-        color: $fourth-color-text;
     }
+
+    .container-card:hover .change{
+        color: $fourth-color-text;
 
     }
 
@@ -116,6 +119,29 @@ section{
        word-spacing: 4px;
     }
 
-}
+    .component-visible{
+     padding-top: 24px 0px 0px;
+     visibility: hidden;
+     opacity: 0;
+     color: $fourth-color-text;
+    }
+
+    .visible{
+        position: relative;
+    }
+    .container-card:hover .visible{
+      visibility: hidden;
+      opacity:0;
+    }
+
+    .container-card:hover .component-visible{
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        bottom:2px;
+        left:30px;
+    }
+}   
+
 
 </style>
