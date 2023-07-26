@@ -58,7 +58,7 @@ export default{
     <!-- Navbar -->    
             <div class="logo"><img src="../assets/img/logo_seo_1x.png" alt="Logo"></div>
     <!-- Menu Navbar -->    
-            <ul class="navbar-nav menu d-inline-block text-light navbar-hover">
+            <ul class="navbar-nav menu d-inline-block text-light">
     <!-- Array element menu -->        
                 <template v-for="(link , i ) in linkNavbar" :key="i">
                     <li v-if="link.button == false" class="nav-item">
@@ -110,13 +110,15 @@ header{
 
             transition: all 0.1s ease;
         }
+        .navbar-nav{
+            transition: all 0.7s ease-in-out;
+        }
         .menu li:hover{
             color:$fourth-color-text;
         }
-        .navbar-hover:hover{
+        .navbar-nav:hover{
             background-color: #001061a2;
 
-            transition: all 1s ease-in-out;
         }
         .fs-button{
             font-size: 11px;

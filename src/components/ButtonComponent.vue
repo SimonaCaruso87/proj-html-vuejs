@@ -29,7 +29,6 @@ export default{
     
     <button class="btn button-orange  orange rounded-5" type="button">{{ textButton }}</button>
     
-
 </template>
 
 <style lang="scss" scoped>
