@@ -7,7 +7,7 @@ import ButtonComponentWhite from './ButtonComponentWhite.vue';
 export default{
     name: "SectionOurPlanComponent",
     components:{
-        ButtonComponentWHite ,
+       ButtonComponentWhite
     },
     data(){
         return{ 
@@ -115,12 +115,6 @@ section{
         font-size: $fourth-size;
 
     }
-
-    // .font-section{
-    //     color:orange; 
-    //     display: block; 
-    //     height: 50px;
-    // }
     
     .size{
         text-align: center; 

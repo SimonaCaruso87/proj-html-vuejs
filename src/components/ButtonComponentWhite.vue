@@ -27,7 +27,7 @@ export default{
 
 <template>
 
-    <button class="d-flex justify-content-center align-items-center button-white white">{{ textButton }}</button>
+    <button class="btn button-white white rounded-5">{{ textButton }}</button>
     
 </template>
 
@@ -37,14 +37,21 @@ export default{
 @use "../assets/scss/main.scss" as *;
 @use "../assets/scss/partials/variables.scss" as*;
 
+        
+        .button-white.white{
+            height: 30px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
 
+            transition: all 1s ease-in-out;
+        }
 
         .button-white.white:hover{
-            background-color:$first-color-bg;
+            background-color:$first-color-button;
             color:$fifth-color-button;
             border: none;
 
-            transition: all 0.5s ease-in-out;
         }
 
         
