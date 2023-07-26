@@ -8,6 +8,7 @@ import ButtonComponentWhite from './components/ButtonComponentWhite.vue';
 import SectionServiceComponent from './components/SectionServiceComponent.vue';
 import SectionOurWorkComponent from './components/SectionOurWorkComponent.vue';
 import SectionOurPlanComponent from './components/SectionOurPlanComponent.vue';
+import SectionOurNewsComponent from './components/SectionOurNewsComponent.vue';
 import axios from 'axios';
 import { store } from './store.js';
 
@@ -23,6 +24,7 @@ export default{
      SectionServiceComponent ,
      SectionOurWorkComponent ,
      SectionOurPlanComponent ,
+     SectionOurNewsComponent ,
   },
   data(){
     return{
@@ -46,6 +48,8 @@ export default{
 <SectionOurWorkComponent />
 
 <SectionOurPlanComponent />
+
+<SectionOurNewsComponent />
 
 <FooterComponent />
 
