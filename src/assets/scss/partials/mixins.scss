@@ -19,6 +19,7 @@
     padding: 15px;
     width: 200px;
 }
+
 @mixin button-blue{
     background-color: $second-color-button;
     color: $third-color-button;
@@ -27,4 +28,15 @@
     font-weight: bolder;
     padding: 15px;
     width: 200px;
+}
+
+@mixin button-white{
+    background-color: $second-color-bg;
+    color: $third-color-button;
+    border:1px solid #5D5F64 ;
+    font-size: 8px ;
+    font-weight: bolder;
+    padding: 15px;
+    width: 100px;
+
 }

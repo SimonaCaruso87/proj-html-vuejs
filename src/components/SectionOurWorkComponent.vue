@@ -52,8 +52,8 @@ export default{
 <template>
     <section class="p-5">
         <!-- Title Section Main Component Our Work -->
-        <div class="text-center text-black pt-3">
-            <h4 class="fw-bold" >Our Work</h4>
+        <div class="text-center text-black pt-2">
+            <h4 class="fw-bold">Our Work</h4>
             <h6 class="font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. In accusamus</h6>
             <h6 class="font-size">tempore laboriosam minus!</h6>
         </div>
@@ -64,7 +64,7 @@ export default{
                 <img :src="getImgPath(image.textImg)" alt="blog-post" class="h-100 object-fit-cover">
             </div>
         </div>
-        <div class="d-flex justify-content-center p-4" >
+        <div class="d-flex justify-content-center pt-3 pb-5">
             <ButtonComponent style="width:140px ; height:40px; font-size: 10px;" :textButton="'VIEW OUR WORK'"/>
         </div>
     </section>
@@ -78,7 +78,7 @@ export default{
 
 section{
     background-color: $second-color-bg;
-    height: 600px;
+    height: 800px;
 
     .font-size{
        font-size: 12px;

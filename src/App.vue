@@ -4,8 +4,10 @@ import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
 import ButtonComponent from './components/ButtonComponent.vue';
+import ButtonComponentWhite from './components/ButtonComponentWhite.vue';
 import SectionServiceComponent from './components/SectionServiceComponent.vue';
 import SectionOurWorkComponent from './components/SectionOurWorkComponent.vue';
+import SectionOurPlanComponent from './components/SectionOurPlanComponent.vue';
 import axios from 'axios';
 import { store } from './store.js';
 
@@ -17,8 +19,10 @@ export default{
      MainComponent ,
      FooterComponent ,
      ButtonComponent ,
+     ButtonComponentWhite ,
      SectionServiceComponent ,
      SectionOurWorkComponent ,
+     SectionOurPlanComponent ,
   },
   data(){
     return{
@@ -36,6 +40,12 @@ export default{
 <HeaderComponent />
 
 <MainComponent />
+
+<SectionServiceComponent />
+
+<SectionOurWorkComponent />
+
+<SectionOurPlanComponent />
 
 <FooterComponent />
 

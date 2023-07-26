@@ -1,72 +1,84 @@
 <script>
 
 import { store } from '../store.js';
-import ButtonComponent from './ButtonComponent.vue';
+import ButtonComponentWhite from './ButtonComponentWhite.vue';
 
 
 export default{
-    name: "SectionOurWorkComponent",
+    name: "SectionOurPlanComponent",
     components:{
-        ButtonComponent
+        ButtonComponentWHite ,
     },
     data(){
         return{ 
           store ,
-          imgArray:[
+          plan:[
             {
-              textImg:"../assets/img/case-study-gallery-3-1-600x450.jpg"
+               typePlan : "Standard",
+               pricePlan: 19,
+               projectPlan: "5 Projects",
+               storagePlan: "5 GB Storage",
+               userPlan: "Unlimited Users" ,
 
             },
             {
-              textImg:"../assets/img/case-study-gallery-2-600x450.jpg"
+               typePlan : "Premium",
+               pricePlan: 29,
+               projectPlan: "10 Projects",
+               storagePlan: "10 GB Storage ",
+               userPlan: "Unlimited Users" ,
 
             },
             {
-              textImg:"../assets/img/case-study-gallery-1-1-600x450.jpg"
+               typePlan : "Professional",
+               pricePlan: 39,
+               projectPlan: "15 Projects",
+               storagePlan: "15 GB Storage",
+               userPlan: "Unlimited Users" ,
 
             },
             {
-              textImg:"../assets/img/case-study-gallery-4-1-600x450.jpg"
-
-            },
-            {
-              textImg:"../assets/img/case-study-gallery-5-1-600x450.jpg"
-
-            },
-            {
-              textImg:"../assets/img/case-study-gallery-6-1-600x450.jpg"
+               typePlan : "Extreme",
+               pricePlan: 59,
+               projectPlan: "Unlimited Projects",
+               storagePlan: "Unlimited Storage",
+               userPlan: "Unlimited Users" ,
 
             },
           ]
+          
         }
     },
     methods:{
-        getImgPath:(imgSrc) => {
-            return new URL(imgSrc,
-            import.meta.url).href;
-        },
+        
     }
 }
 </script>
 
 <template>
     <section class="p-5">
-        <!-- Title Section Main Component Our Work -->
-        <div class="text-center text-black pt-3">
-            <h4 class="fw-bold" >Our Work</h4>
+        <!-- Title Section Main Component Our Plans -->
+        <div class="text-center text-white">
+            <h4 class="fw-bold">Our Plans</h4>
             <h6 class="font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. In accusamus</h6>
             <h6 class="font-size">tempore laboriosam minus!</h6>
         </div>
         <!-- Container Card -->
         <div class="container size" style="width: 1300px;">
-        <!-- Numero 6 Card in array -->
-            <div v-for="(image , i) in imgArray" :key="i" class="card container-card m-2" style="height:250px; width:320px; border:0px;">
-                <img :src="getImgPath(image.textImg)" alt="blog-post" class="h-100 object-fit-cover">
+        <!-- Numero 4 Card in array -->
+            <div v-for="(plans , i) in plan" :key="i" class="container-card m-2 p-3 bg-white position-relative" style="height:300px; width:200px;">
+                <h5 class="fw-bold">{{ plans.typePlan }}</h5>
+                <div><h1><span class="text-black fs-7 position-absolute fw-bold">&dollar;</span><span class="text-primary fs-1">{{  plans.pricePlan }}</span><span class="fs-12 text-black fw-bold">monthly</span><span class="fs-6 position-absolute coordinates text-primary">00</span></h1></div>
+                <div class="text-color p-3">{{ plans.projectPlan }}</div>
+                <div class="text-color p-3">{{  plans.storagePlan }}</div>
+                <div class="text-color p-3">{{  plans.userPlan }}</div>
+        <!-- Button Section -->        
+                <div class="d-flex justify-content-center align-items-center">
+                    <ButtonComponentWhite :textButton="'START TODAY'"/>
+                </div>
             </div>
         </div>
-        <div class="d-flex justify-content-center p-4" >
-            <ButtonComponent style="width:140px ; height:40px; font-size: 10px;" :textButton="'VIEW OUR WORK'"/>
-        </div>
+        
     </section>
 </template>
 
@@ -77,18 +89,38 @@ export default{
 @use "../assets/scss/partials/variables.scss" as*;
 
 section{
-    background-color: $second-color-bg;
+    background-image: url(../assets/img/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 600px;
 
     .font-size{
        font-size: 12px;
     }
 
-    .font-section{
-        color:orange; 
-        display: block; 
-        height: 50px;
+    .fs-12{
+        font-size:$first-size;
     }
+    .fs-7{
+        font-size:$fourth-size;
+        vertical-align: top;
+
+        top:60px;
+        left:55px;
+    }
+
+    .text-color{
+        color:$third-color-text;
+        font-weight: bold;
+        font-size: $fourth-size;
+
+    }
+
+    // .font-section{
+    //     color:orange; 
+    //     display: block; 
+    //     height: 50px;
+    // }
     
     .size{
         text-align: center; 
@@ -98,6 +130,12 @@ section{
         align-items:center; 
         padding:15px;
     }
+
+    .coordinates{
+        top:60px;
+        left:106px;
+    }
+
 }
 
 </style>

@@ -1,15 +1,9 @@
 <script>
 
 import { store } from '../store.js';
-import SectionServiceComponent from './components/SectionServiceComponent.vue';
-import SectionOurWorkComponent from './components/SectionOurWorkComponent.vue';
 
 export default{
     name: "MainComponent",
-    components:{
-        SectionServiceComponent ,
-        SectionOurWorkComponent ,
-    },
     data(){
         return{
           store,
@@ -67,10 +61,6 @@ export default{
             class="img-bottom" 
             alt="desk-front">
         </div>
-
-        <SectionServiceComponent />
-
-        <SectionOurWorkComponent />
         
     </main>
 </template>
