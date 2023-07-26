@@ -37,10 +37,6 @@ export default{
 
 <MainComponent />
 
-<SectionServiceComponent />
-
-<SectionOurWorkComponent />
-
 <FooterComponent />
 
 
