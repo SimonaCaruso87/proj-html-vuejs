@@ -57,7 +57,7 @@ export default{
 <template>
     <section class="p-5">
         <!-- Title Section Main Component Our Work -->
-        <div class="text-center text-black pt-2">
+        <div class="text-center text-black p-2">
             <h4 class="fw-bold">Our News</h4>
             <h6 class="font-size">Lorem ipsum dolor sit amet consectetur adipisicing elit. In accusamus</h6>
             <h6 class="font-size">tempore laboriosam minus!</h6>
@@ -68,15 +68,13 @@ export default{
             <div v-for="(image , i) in imgArray" :key="i" class="card container-card m-2" style="height:250px; width:320px; border:0px;">
                 <img :src="getImgPath(image.textImg)" alt="blog-post" class="h-100 object-fit-cover">
             </div>
-            <div  class="container size" v-for="(textsArray , i) in textArray" :key="i">
-                <div class="card container-card m-2">
-                    <h6 class="text-warning fw-bold p-2">{{ textsArray.textTitle }}</h6>
-                        <div class="text-secondary-emphasis font-size ">{{ textsArray.textDate }}</div>
-                        <div>{{ textsArray.text }}</div>
-                </div>
+            <div v-for="(textsArray , i) in textArray" :key="i" class="card container-card m-2" style="height:200px; width:320px; border:0px; background-color:#f8f8f8 ;">
+                <h6 class="text-warning fw-bold pt-2">{{ textsArray.textTitle }}</h6>
+                    <div class="text-secondary-emphasis font-size ">{{ textsArray.textDate }}</div>
+                    <div class="fs-7">{{ textsArray.text }}</div>
             </div>
         </div>
-        <div class="d-flex justify-content-center pt-3 pb-5">
+        <div class="d-flex justify-content-center pb-1">
             <ButtonComponent style="width:140px ; height:40px; font-size: 10px;" :textButton="'GO TO NEWS'"/>
         </div>
     </section>
@@ -95,6 +93,11 @@ section{
     .font-size{
        font-size: 10px;
     }
+
+    .fs-7{
+        font-size: 12px;
+        padding: 10px;
+    }
     
     .size{
         text-align: center; 
@@ -104,6 +107,8 @@ section{
         align-items:center; 
         padding:15px;
     }
+
+
 }
 
 </style>
