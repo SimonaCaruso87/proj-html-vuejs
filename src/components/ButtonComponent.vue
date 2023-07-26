@@ -27,7 +27,7 @@ export default{
 
 <template>
     
-    <button class="btn button-orange orange rounded-5" type="button">{{ textButton }}</button>
+    <button class="btn button-orange  orange rounded-5" type="button">{{ textButton }}</button>
     
 
 </template>
@@ -38,8 +38,12 @@ export default{
 @use "../assets/scss/main.scss" as *;
 @use "../assets/scss/partials/variables.scss" as*;
 
-        .orange:hover{
-            background-color:orangered;
+        .button-orange.orange:hover{
+            background-color:$second-color-bg;
+            color:$first-color-button;
+            border: none;
+
+            transition: all 0.5s ease-in-out;
         }
 
         
