@@ -95,6 +95,7 @@ section{
     }
 
     .fs-7{
+        
         font-size: 12px;
         padding: 10px;
     }
