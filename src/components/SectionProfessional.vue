@@ -1,14 +1,11 @@
 <script>
 
 import { store } from '../store.js';
-import ButtonComponent from './ButtonComponent.vue';
 
 
 export default{
     name: "SectionOurNewsComponent",
-    components:{
-        ButtonComponent
-    },
+    
     data(){
         return{ 
           store ,
@@ -89,33 +86,9 @@ export default{
 
 
 template{
-    background-color: $second-color-bg;
-    height: 800px;
+    
 }
 // prima section
-.section-one{
-    
-
-    .font-size{
-       font-size: 10px;
-    }
-
-    .fs-7{
-
-        font-size: 12px;
-        padding: 10px;
-    }
-    
-    .size{
-        text-align: center; 
-        display:flex; 
-        flex-wrap: wrap; 
-        justify-content:center; 
-        align-items:center; 
-        padding:15px;
-    }
-}
-//section two
 .section-two{
 
     height: 400px;
@@ -137,7 +110,7 @@ template{
   }
 
 .height{
-    height: 250px;
+    height: 50px;
     display: flex;
     justify-content: center;
     padding-right: 70px;
