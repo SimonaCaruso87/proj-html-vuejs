@@ -116,10 +116,10 @@ header{
         .menu li:hover{
             color:$fourth-color-text;
         }
-        .navbar-nav:hover{
-            background-color: #001061a2;
+        // .navbar-nav:hover{
+        //     background-color: #001061a2;
 
-        }
+        // }
         .fs-button{
             font-size: 11px;
             width: 50px;
