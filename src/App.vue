@@ -10,6 +10,7 @@ import SectionOurWorkComponent from './components/SectionOurWorkComponent.vue';
 import SectionOurPlanComponent from './components/SectionOurPlanComponent.vue';
 import SectionOurNewsComponent from './components/SectionOurNewsComponent.vue';
 import SectionProfessional from './components/SectionProfessional.vue';
+import WorkCardComponent from './components/WorkCardComponent.vue';
 import SectionConsultation from './components/SectionConsultation.vue';
 import axios from 'axios';
 import { store } from './store.js';
@@ -29,6 +30,7 @@ export default{
      SectionOurNewsComponent ,
      SectionProfessional ,
      SectionConsultation ,
+     WorkCardComponent ,
   },
   data(){
     return{

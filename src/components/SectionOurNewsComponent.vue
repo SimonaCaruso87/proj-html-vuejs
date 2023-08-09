@@ -92,14 +92,10 @@ export default{
 @use "../assets/scss/partials/variables.scss" as*;
 
 
-template{
-    background-color: $second-color-bg;
-    height: 800px;
-}
 // prima section
 .section-one{
 
-    
+    background-color: #F7F8FA;
 
     .font-size{
        font-size: 10px;

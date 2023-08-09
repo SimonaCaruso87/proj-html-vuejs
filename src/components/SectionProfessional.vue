@@ -1,126 +1,155 @@
 <script>
 
 import { store } from '../store.js';
+import WorkCardComponent from './WorkCardComponent.vue';
+
 
 
 export default{
-    name: "SectionOurNewsComponent",
+    name: "SectionProfessional",
     
     data(){
-        return{ 
-          store ,
-          
+        return {
+            testimonialList:[
+                {
+                    linkImg:'../assets/img/testimonials-1.jpg',
+                    text:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda pariatur aut id possimus cupiditate vel!',
+                    name:'Lorem ipsum',
+                    society:'sit amet'
+                },     
+                {
+                    linkImg:'../assets/img/testimonials-2.jpg',
+                    text:'Ability proceeds from a fusion of skills, knowledge, understanding and imagination, consolidated by experience',
+                    name:'luis desalvo',
+                    society:'creo tech'
+                },     
+                {
+                    linkImg:'../assets/img/testimonials-1.jpg',
+                    text:'Ability proceeds from a fusion of skills, knowledge, understanding and imagination, consolidated by experience',
+                    name:'luis desalvo',
+                    society:'creo tech'
+                },     
+            ],
+            testimonialActive:0,
         }
     },
+    components:{
+        WorkCardComponent
+    },
     methods:{
-        
+        getImgPath: (imgSrc)=> {
+            return new URL(imgSrc, import.meta.url).href;
+        },
+        cangeTestimonialActive(index){
+            this.testimonialActive = index;
+        }
     }
 }
 </script>
 
 <template>
-    <section class="section-two container">
-        <div class="text-center fs-4 fw-bold m-5 text-black">What Our Client Say</div>
-        <div id="carouselExampleDark" class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active button-circle" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="button-circle" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="button-circle" aria-label="Slide 3"></button>
-
-            </div>
-            <div class="carousel-inner height">
-                <div class="carousel-item active profile-pic  d-flex justify-content-center">
-                    <img src="../assets/img/testimonials-1.jpg" class="d-block w-100" alt="testimonials">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Luis De Salvo CREO TECH</p>
+    <section id="testimonials">
+        <div class="container">
+           <h4 class="fw-bold text-center" >What our clients say</h4>
+            <div class="slider">
+                <template v-for="(testimonial, index) in testimonialList" :key="index">
+                    <div class="testimonial" v-if="index == testimonialActive">
+                        <div class="img-wrapper">
+                            <img :src="getImgPath(testimonial.linkImg)" :alt="testimonial.name">
+                        </div>
+                        <p class="text">{{ testimonial.text }}</p>
+                        <p>
+                            <span class="name">{{ testimonial.name }}</span>,
+                            <span class="society">{{ testimonial.society }}</span>
+                        </p>
+                    </div>
+                </template>
+                <div class="comand-slider">
+                    <div class="bullet" 
+                        :class="index == testimonialActive ? 'active' : ''" 
+                        v-for="(testimonial, index) in testimonialList" 
+                        :key="index"
+                        @click="cangeTestimonialActive(index)"
+                    >
                     </div>
                 </div>
-                
-                <div class="carousel-item profile-pic  d-flex justify-content-center">
-                    <img src="../assets/img/testimonials-2.jpg" class="d-block w-100" alt="testimonials">
-                    <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-                </div>
-                
-                <div class="carousel-item height profile-pic d-flex justify-content-center">
-                    <img src="../assets/img/testimonials-1.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
-                
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <!--end slider-->
         </div>
-        <hr class="container">
-        <div class="container d-flex justify-content-between container-logo-partners">
-            <img src="../assets/img/clients_partner_5-200x202.png" alt="client-partners">
-            <img src="../assets/img/clients_partner_6-200x202.png" alt="client-partners">
-            <img src="../assets/img/clients_partner_1-200x202.png" alt="client-partners">
-            <img src="../assets/img/clients_partner_2-200x202.png" alt="client-partners">
-        </div>
-        
     </section>
-
-    
-
-
+    <!--end vantage section-->
 </template>
 
 <style lang="scss" scoped>
 
-@use "../assets/scss/partials/mixins" as *;
-@use "../assets/scss/main.scss" as *;
-@use "../assets/scss/partials/variables.scss" as*;
+    @use '../assets/scss/partials/mixins.scss' as *;
+    @use '../assets/scss/partials/variables.scss' as *;
 
+    #testimonials{
+        padding-block: 50px;
+        h2{
+            text-align: center;
+            text-transform: capitalize;
+        }
 
-template{
+        .slider{
+            border-bottom: 1px solid #d0d3dd; 
+            padding-bottom: 50px;    
+            .testimonial{
+                text-align: center;
+                .img-wrapper{
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    margin-inline: auto;
+                    overflow: hidden;
+                    margin-block: 50px;
+                    background-size: cover;
+                }
+                p{
+                    &.text{
+                        max-width: 600px;
+                        margin-inline: auto;
+                        line-height: 150%;
+                        font-style: italic;
+                        font-weight: 500;
+                        margin-bottom: 30px;
+                    }
+                    span{
+                        &.name{
+                            font-weight: 700;
+                            text-transform: capitalize;
+                        }
+                        &.society{
+                            text-transform: uppercase;
+                            font-weight: 500;
+                        }
+                    }
+                        
     
-}
-// prima section
-.section-two{
-
-    height: 400px;
-    .profile-pic{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0CD977;
-    height: 100px;
-    width: 100px;
-    overflow: hidden;
-    border-radius: 50%;
-}
-
-.container-logo-partners{
-    height: 200px;
-    width: 1000px;
-    padding: 50px;
-  }
-
-.height{
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    padding-right: 70px;
-}
-
-.button-circle{
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
-}
-
-}
+                }
+                
+                
+    
+            }
+    
+            .comand-slider{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-block:30px;
+                gap: 10px;
+                .bullet{
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    &.active{
+                        background-color: black;
+                    }
+                }
+            }
+        }
+    }
 </style>
